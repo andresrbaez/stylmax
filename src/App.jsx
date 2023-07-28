@@ -1,21 +1,29 @@
 import './App.css'
-import Footer from './components/Footer/Footer'
-import NavBar from './components/NavBar/NavBar'
+import {Route, Routes} from 'react-router-dom'
+import Home from './pages/Home'
+import Esteticos from './pages/Esteticos'
+import Corporales from './pages/Corporales'
 
 function App() {
 
   return (
-    <>
-    <div className='w-full'>
-        <NavBar/>
-    </div>
-      <div className="container mt-10">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, esse?
-      </div>
-    <div className='w-full absolute bottom-0'>
-        <Footer/>
-    </div>
-    </>
+    // <>
+    // <div className='w-full'>
+    //     <NavBar/>
+    // </div>
+    //   <div className="container mt-10">
+    //     <Home
+    //     />
+    //   </div>
+    // <div className='w-full border-[var(--color-extralightblack)] border-t'>
+    //     <Footer/>
+    // </div>
+    // </>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/esteticos' element={<Esteticos />} />
+        <Route path='/corporales' element={<Corporales />} />
+      </Routes>
   )
 }
 

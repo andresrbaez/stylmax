@@ -167,3 +167,92 @@
   transform-origin: bottom;
   transition: transform .5s;
 }
+
+
+
+/* imagenes estetica */
+.wrap{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.boxPortfolio{
+  position: relative;
+  width: auto;
+  border-radius: 15px;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 50px rgba(66,66,66,.34901960784313724), inset 0px 0px 50px rgba(66,66,66,.34901960784313724);
+  transition: all 500ms ease-out;
+}
+
+/* img */
+.imgPortfolio{
+  position: relative;
+  width: 450px;
+  height: auto;
+  overflow: hidden;
+  transition: all 500ms ease-out;
+}
+/* capa */
+.cap{
+  position: absolute;
+  top: 0;
+  color: #fff;
+  background: rgba(51, 51, 51, 0.707);
+  /* background: #565a7e82; */
+  width: 100%;
+  height: 100%;
+  transition: all 500ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+}
+.boxPortfolio>.ejemplo:hover > .cap{
+  opacity: 1;
+  visibility: visible;
+}
+.boxPortfolio>.ejemplo:hover > .cap .infoHover2{
+  margin-top: 90px;
+  margin-bottom: 15px;
+}
+.boxPortfolio>.ejemplo > .cap .infoHover2{
+  margin-bottom: 120px;
+  transition: all 500ms ease-out;
+  margin-top: 30px;
+}
+.boxPortfolio>.ejemplo > .cap p{
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 200px;
+  margin: auto;
+}
+.infoHover{
+  display: flex;
+  flex-direction: column;
+  color: var(--color-lightgold) !important;
+}
+.infoHover2{
+  display: flex;
+  flex-direction: column;
+  color: var(--color-lightgold) !important;
+}
+.infoHover2>b{
+  color: var(--color-lightgold);
+  /* color: #fff; */
+  font-size: 35px;
+
+}
+.imgHover{
+  width: 80px;
+  /* background-color: #565a7e20; */
+}
